@@ -27,6 +27,11 @@ collections:
         name: description
         widget: string
         required: false
+      
+      - label: Featured Image
+        name: featured_image
+        widget: image
+        required: false
 
       - label: Body
         name: body

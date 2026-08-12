@@ -30,6 +30,14 @@ collections:
         name: featured_image
         widget: image
         required: false
+      
+      - label: "Manual PDF"
+        name: "manual_pdf"
+        widget: "file"
+        default: "/uploads/general-manual.pdf"
+        media_library:
+          config:
+            multiple: true
 
       - label: Body
         name: body

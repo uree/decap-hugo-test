@@ -1,14 +1,12 @@
-{{ with .Resources.Get .Params.image }}
-  {{ $small := .Resize "480x webp" }}
-  {{ $medium := .Resize "768x webp" }}
-  {{ $large := .Resize "1200x webp" }}
+{{ $small := .Resize "480x webp" }}
+{{ $medium := .Resize "768x webp" }}
+{{ $large := .Resize "1200x webp" }}
 
-  <img
-    src="{{ $medium.RelPermalink }}"
-    srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $large.RelPermalink }} 1200w"
-    sizes="(max-width: 768px) 100vw, 768px"
-    width="{{ .Width }}"
-    height="{{ .Height }}"
-    alt="{{ $.Title }}"
-  >
-{{ end }}
+<img
+  src="{{ $medium.RelPermalink }}"
+  srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $large.RelPermalink }} 1200w"
+  sizes="(max-width: 768px) 100vw, 768px"
+  width="{{ .Width }}"
+  height="{{ .Height }}"
+  alt="{{ $.Title }}"
+>

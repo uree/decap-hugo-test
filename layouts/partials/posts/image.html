@@ -3,6 +3,7 @@
 {{ $large := .Resize "1200x webp" }}
 
 <img
+  class="post-image"
   src="{{ $medium.RelPermalink }}"
   srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $large.RelPermalink }} 1200w"
   sizes="(max-width: 768px) 100vw, 768px"

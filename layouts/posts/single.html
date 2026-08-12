@@ -36,7 +36,9 @@
       </div>
       <div>
         {{ with .Params.manual_pdf }}
-          <iframe src="{{ . | relURL }}" width="100%" height="800"></iframe>
+          {{ range . }}
+            <iframe src="{{ . | relURL }}" width="100%" height="800"></iframe>
+          {{ end }}
         {{ end }}
       </div>
     </article>

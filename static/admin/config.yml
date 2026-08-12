@@ -39,7 +39,6 @@ collections:
       - label: "Manual PDF"
         name: "manual_pdf"
         widget: "file"
-        default: "/uploads/general-manual.pdf"
         required: false
         media_library:
           config:

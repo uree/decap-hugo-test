@@ -15,11 +15,7 @@
     <article>
       <h1>{{ .Title }}</h1>
 
-      {{ with .Params.featured_image }}
-        <figure>
-          <img src="{{ . | relURL }}" alt="{{ $.Title }}">
-        </figure>
-      {{ end }}
+      {{ partial "posts/image.html" . }}
 
       <p>
         <time datetime="{{ .Date.Format "2006-01-02" }}">

@@ -11,6 +11,9 @@ collections:
     folder: content/posts
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
 
     fields:
       - label: Title
@@ -30,6 +33,8 @@ collections:
         name: featured_image
         widget: image
         required: false
+        media_folder: ""
+        public_folder: ""
       
       - label: "Manual PDF"
         name: "manual_pdf"
@@ -42,3 +47,5 @@ collections:
       - label: Body
         name: body
         widget: markdown
+        media_folder: ""
+        public_folder: ""
